@@ -3,3 +3,7 @@
 
 ### JetBrains ###
 .idea/
+
+## Clion ##
+CMakeLists.txt
+cmake-build-debug/
