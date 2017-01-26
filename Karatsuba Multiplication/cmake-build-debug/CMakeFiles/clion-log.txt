@@ -1,5 +1,0 @@
-/Applications/CLion.app/Contents/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/Users/Shahen/Desktop/Algorithms/Karatsuba Multiplication"
--- Boost version: 1.63.0
--- Configuring done
--- Generating done
--- Build files have been written to: /Users/Shahen/Desktop/Algorithms/Karatsuba Multiplication/cmake-build-debug
