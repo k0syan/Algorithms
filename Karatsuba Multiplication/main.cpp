@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cmath>
 
+
 unsigned long long karatsuba_mul(unsigned long long x, unsigned long long y) {
   int len_x = (int) std::to_string(x).length();
 
@@ -19,10 +20,6 @@ unsigned long long karatsuba_mul(unsigned long long x, unsigned long long y) {
 }
 
 int main() {
-  //TODO: Find out a type for 64 digit integers
-  //unsigned long long x = 3141592653589793238462643383279502884197169399375105820974944592;
-  //unsigned long long y = 2718281828459045235360287471352662497757247093699959574966967627;
-
   unsigned long long x = 1234;
   unsigned long long y = 5678;
   unsigned long long answer = karatsuba_mul(x, y);
