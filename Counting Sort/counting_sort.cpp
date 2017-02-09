@@ -1,51 +1,32 @@
 #include <iostream>
+#include <vector>
+#include <algorithm>
+#include <iterator>
 using namespace std;
 
-int getMax(int* array, int size) {
-  int max = array[0];
-  for (int i = 1; i < size; ++i) {
-    if (array[i] > max) {
-      max = array[i];
-    }
-  }
+vector<int> countingSort(vector<int> array) { 
+  int min = *min_element(begin(array), end(array));
+  int max = *max_element(begin(array), end(array));
 
-  return max;
-}
+  cout << min << " " << max << endl;
+  int size1 = max - min + 1;
+  int size = array.size();
 
-int getMin(int* array, int size) {
-  int min = array[0];
-  for (int i = 1; i < size; ++i) {
-    if (array[i] < min) {
-      min = array[i];
-    }
-  }
+  vector<int> returnArray;
+  vector<int> array1(size1, 0);
 
-  return min;
-}
-
-int* countingSort(int* array,int size) { 
-  int min = getMin(array, size);
-  int max = getMax(array, size);
-  int size1 = 1;
-  size1 = max - min + 1;
-
-  int *returnArray = new int[size];
-  int *array1 = new int[size1];
-
-  for (int i = 0; i < size1; ++i) {
-    array1[i] = 0;
-  }
-  
   for (int i = 0; i < size; ++i) {
     int index = array[i] - min;
     array1[index]++;
   }
 
-  int j = 0;
   for (int i = 0; i < size1; ++i) {
     while(array1[i] != 0) {
-      returnArray[j] = i - abs(min);
-      ++j;
+      if (min < 0) {
+        returnArray.push_back(i - abs(min));
+      } else {
+        returnArray.push_back(i + min);
+      }
       --array1[i];
     }
   }
@@ -54,13 +35,11 @@ int* countingSort(int* array,int size) {
 }
 
 int main() {
-  int array[8] = {1, 3, 2, 3, 3, 4, 0, 10};
+  vector<int> array = {1, 3, 2, 3, 3, -12, 10};
 
-  int size = sizeof(array) / sizeof(int);
+  vector<int> sortedArray = countingSort(array);
 
-  int *sortedArray = countingSort(array, size);
-
-  for (int i = 0; i < size; ++i) {
+  for (int i = 0; i < array.size(); ++i) {
     cout << sortedArray[i] << " ";
   }
 
