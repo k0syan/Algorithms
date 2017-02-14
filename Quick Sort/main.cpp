@@ -14,6 +14,30 @@ int pivot_last(vector<int> numbers) {
   return numbers[numbers.size() - 1];
 }
 
+int pivot_median(vector<int> numbers) {
+  int f = numbers[0];
+  int l = numbers[numbers.size() - 1];
+  int m;
+  if (numbers.size() % 2 == 1) {
+    m = numbers[numbers.size() / 2];
+  } else {
+    m = numbers[numbers.size() / 2 - 1];
+  }
+
+  int median = m;
+  if (f >= l) {
+    if (median >= f) {
+      median = f;
+    }
+  } else if (l >= f) {
+    if (median >= l) {
+      median = l;
+    }
+  }
+
+  return median;
+}
+
 vector<int> quick_sort(vector<int> numbers) {
   if (numbers.size() <= 1) {
     return numbers;
