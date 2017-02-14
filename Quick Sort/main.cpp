@@ -6,6 +6,14 @@ using namespace std;
 
 unsigned long long comparisons_count = 0;
 
+int pivot_first(vector<int> numbers) {
+  return numbers[0];
+}
+
+int pivot_last(vector<int> numbers) {
+  return numbers[numbers.size() - 1];
+}
+
 vector<int> quick_sort(vector<int> numbers) {
   if (numbers.size() <= 1) {
     return numbers;
