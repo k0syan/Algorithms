@@ -1,10 +1,11 @@
 #include <iostream>
 #include <cmath>
+using namespace std;
 
 typedef unsigned long long huge;
 
 huge karatsuba(huge x, huge y) {
-  int len_x = (int) std::to_string(x).length();
+  int len_x = (int) to_string(x).length();
 
   if (len_x == 2) {
     return x * y;
@@ -23,9 +24,9 @@ huge karatsuba(huge x, huge y) {
 int main() {
   huge x = 1234;
   huge y = 5678;
+  
   huge answer = karatsuba(x, y);
-
-  std::cout << answer << std::endl;
+  cout << answer << endl;
 
   return 0;
 }
