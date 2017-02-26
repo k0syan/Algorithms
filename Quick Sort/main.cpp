@@ -1,7 +1,6 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
-
 using namespace std;
 
 unsigned long long comparisons_count = 0;
@@ -75,7 +74,7 @@ vector<int> quick_sort(vector<int> numbers) {
 }
 
 int main() {
-  ifstream file("../QuickSort.txt");
+  ifstream file("data.txt");
 
   int data;
   vector<int> numbers;
@@ -85,7 +84,6 @@ int main() {
   }
 
   vector<int> sorted_array = quick_sort(numbers);
-
   cout << comparisons_count << endl;
 
   return 0;
