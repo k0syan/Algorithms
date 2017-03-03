@@ -4,7 +4,7 @@
 #include <iterator>
 using namespace std;
 
-vector<int> countingSort(vector<int> array) { 
+vector<int> counting_sort(vector<int> array) {
   int min = *min_element(begin(array), end(array));
   int max = *max_element(begin(array), end(array));
 
@@ -21,7 +21,7 @@ vector<int> countingSort(vector<int> array) {
   }
 
   for (int i = 0; i < size1; ++i) {
-    while(array1[i] != 0) {
+    while (array1[i] != 0) {
       if (min < 0) {
         returnArray.push_back(i - abs(min));
       } else {
@@ -36,13 +36,11 @@ vector<int> countingSort(vector<int> array) {
 
 int main() {
   vector<int> array = {1, 3, 2, 3, 3, -12, 10};
-
-  vector<int> sortedArray = countingSort(array);
+  vector<int> sorted_array = counting_sort(array);
 
   for (int i = 0; i < array.size(); ++i) {
-    cout << sortedArray[i] << " ";
+    cout << sorted_array[i] << " ";
   }
-
   cout << endl;
 
   return 0;
