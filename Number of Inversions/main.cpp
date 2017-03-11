@@ -51,7 +51,7 @@ vector<int> merge_sort(vector<int> numbers, int start, int end) {
 
 
 int main() {
-  ifstream file("../IntegerArray.txt");
+  ifstream file("data.txt");
 
   int data;
   vector<int> numbers;
