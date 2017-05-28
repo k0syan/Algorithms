@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cmath>
-using namespace std;
 
+using namespace std;
 typedef unsigned long long huge;
 
 huge karatsuba(huge x, huge y) {
