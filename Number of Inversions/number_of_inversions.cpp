@@ -1,8 +1,8 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
-using namespace std;
 
+using namespace std;
 unsigned long long inversions_count = 0;
 
 vector<int> merge(vector<int> first_array, vector<int> second_array) {
