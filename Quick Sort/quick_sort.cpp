@@ -3,7 +3,6 @@
 #include <vector>
 
 using namespace std;
-
 unsigned long long comparisons_count = 0;
 
 int pivot_first(vector<int> numbers) {
@@ -120,6 +119,5 @@ int main() {
   }
 
   cout << endl << comparisons_count << endl;
-
   return 0;
 }
