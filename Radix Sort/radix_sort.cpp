@@ -14,11 +14,6 @@ vector<int> counting_sort(vector<int> arr, int pos) {
     int digit = (arr[i] / pos) % 10;
     digits[digit]++;
   }
-
-  for (int i = 0; i < 10; ++i) {
-    
-  }
-
   return return_arr;
 }
 
